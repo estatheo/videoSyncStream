@@ -1,0 +1,26 @@
+var app=require('express')();
+var http= require('http').Server(app);
+var io= require('socket.io')(http);
+
+
+app.get('/', function(req,res){
+    res.sendFile(__dirname+ '/index.html');
+});
+
+io.on('connection', function(socket){
+    socket.on('click', function(msg){
+        console.log('click');
+        io.emit('ping', {for: 'everyone'});
+    });
+    socket.on('url', function(url){
+        socket.broadcast.emit('url', url);
+    })
+    
+    socket.on('command', function(command){
+        socket.broadcast.emit('command', command);
+    })
+  });
+http.listen(3000, function(){
+    console.log('listening on *:3000');
+});
+
