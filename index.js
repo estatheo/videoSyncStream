@@ -20,7 +20,7 @@ io.on('connection', function(socket){
         socket.broadcast.emit('command', command);
     })
   });
-app.listen(process.env.port, function(){
+http.listen(process.env.port, function(){
     
 });
 
