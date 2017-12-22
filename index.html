@@ -23,44 +23,6 @@
         <button onclick="send('pause')">Pause</button>
         <video id='video2' width="400"></video>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var vid=document.getElementById('video');
-        var socket=io();
-        function select(url){
-             socket.emit("url", url);
-            var source=document.createElement('source');
-            source.setAttribute('src', url);
-            video.appendChild(source);
-            // document.getElementById('video2').appendChild('<source src="'+url+'" type="video/mp4">');
-        }
-        function send(msg){
-            if(msg === 'play'){
-                vid.play();
-                socket.emit('command',"play");
-            }
-            else if(msg === 'pause'){
-                vid.pause();
-                socket.emit('command',"pause");
-            }
-        }
-        
-        socket.on('url',function(url){
-            document.getElementById('url').innerText=url;
-            // video.children=[];
-            var source=document.createElement('source');
-            source.setAttribute('src', url);
-            video.appendChild(source);
-        });
-        
-        socket.on('command', function(command){
-            if(command === 'play'){
-                vid.play();
-            }
-            else if(command === 'pause'){
-                vid.pause();
-                
-            }
-       })
-    </script>
+    <script src="/index.js" ></script>
   </body>
 </html>
