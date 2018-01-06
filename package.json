@@ -4,7 +4,10 @@
   "description": "my first socket.io app",
   "dependencies": {
     "express": "^4.16.2",
-    "socket.io": "^2.0.3",
-    "standard": "^10.0.3"
+    "foundation": "^4.2.1-1",
+    "jQuery": "^1.7.4",
+    "socket.io": "^2.0.4",
+    "standard": "^10.0.3",
+    "vue-socket.io": "^2.1.1-a"
   }
 }

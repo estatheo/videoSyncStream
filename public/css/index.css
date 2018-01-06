@@ -1,0 +1,49 @@
+#aaaaapp{
+    background: url(/assets/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+body{
+    background-color: #dbf9f5
+}
+
+
+#main-wrapper {
+    min-height:800px; 
+    justify-content: center;
+}
+
+#wrapper {
+    justify-content: center;
+}
+
+#video-card {
+    min-height: 486px;
+}
+
+video {
+    min-height: 404px;
+    min-width: 797.3px;
+}
+
+#video-wrapper {
+    justify-content: center;
+}
+.card{
+    justify-content: center;
+    margin: 8px;
+    box-shadow: 5px;
+    border-radius: 2px;
+    transition: all 400ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37); 
+
+}
+
+textarea {
+    min-height: 66px;
+    display: table;
+}
+
